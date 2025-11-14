@@ -1,7 +1,7 @@
 [package]
 name = "tenjin_sdn"
 description = "Tenjin is The software-defined networking framework written in Rust, offering high performance and memory safety. It can be used as both a framework and a command line tool."
-version = "1.0.2"
+version = "1.0.3"
 authors = ["Nawasan <nawasan.dev@gmail.com>"]
 license = "MIT"
 edition = "2021"
@@ -22,10 +22,10 @@ path = "src/main.rs"
 
 [dependencies]
 byteorder = "1.5.0"
-clap = { version = "4.5.37", features = ["derive"], optional = true }
-clap_complete = { version = "4.5.50", optional = true }
+clap = { version = "4.5.51", features = ["derive"], optional = true }
+clap_complete = { version = "4.5.60", optional = true }
 etherparse = "0.17.0"
-tokio = { version = "1.45.0", features = [
+tokio = { version = "1.48.0", features = [
     "rt-multi-thread",
     "net",
     "macros",
