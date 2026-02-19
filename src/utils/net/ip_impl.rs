@@ -39,9 +39,9 @@ impl<'a> GetIp for NetSlice<'a> {
     /// * `Result<Ipv6Addr, String>` - The IPv6 destination address if found, or an error if not IPv6
     fn ipv6_dst(&self) -> Result<Ipv6Addr, String> {
         if let NetSlice::Ipv6(ip) = self {
-            return Ok(ip.header().source_addr());
+            Ok(ip.header().destination_addr())
         } else {
-            return Err("It is not ipv6".into());
+            Err("It is not ipv6".into())
         }
     }
 
@@ -51,9 +51,9 @@ impl<'a> GetIp for NetSlice<'a> {
     /// * `Result<Ipv6Addr, String>` - The IPv6 source address if found, or an error if not IPv6
     fn ipv6_src(&self) -> Result<Ipv6Addr, String> {
         if let NetSlice::Ipv6(ip) = self {
-            return Ok(ip.header().source_addr());
+            Ok(ip.header().source_addr())
         } else {
-            return Err("It is not ipv6".into());
+            Err("It is not ipv6".into())
         }
     }
 
@@ -63,9 +63,9 @@ impl<'a> GetIp for NetSlice<'a> {
     /// * `Result<Ipv4Addr, String>` - The IPv4 destination address if found, or an error if not IPv4
     fn ipv4_dst(&self) -> Result<Ipv4Addr, String> {
         if let NetSlice::Ipv4(ip) = self {
-            return Ok(ip.header().destination_addr());
+            Ok(ip.header().destination_addr())
         } else {
-            return Err("It is not ipv4".into());
+            Err("It is not ipv4".into())
         }
     }
 
@@ -75,9 +75,9 @@ impl<'a> GetIp for NetSlice<'a> {
     /// * `Result<Ipv4Addr, String>` - The IPv4 source address if found, or an error if not IPv4
     fn ipv4_src(&self) -> Result<Ipv4Addr, String> {
         if let NetSlice::Ipv4(ip) = self {
-            return Ok(ip.header().destination_addr());
+            Ok(ip.header().source_addr())
         } else {
-            return Err("It is not ipv4".into());
+            Err("It is not ipv4".into())
         }
     }
 }

@@ -7,7 +7,7 @@ use crate::{
     example::{Controller10, Controller13},
     openflow::{ofp10::ControllerFrame10, ofp13::ControllerFrame13},
 };
-use clap::{command, CommandFactory, Parser, Subcommand};
+use clap::{CommandFactory, Parser, Subcommand};
 use clap_complete::{generate, Shell};
 use std::{io, net::SocketAddr};
 use tokio::task::JoinHandle;
