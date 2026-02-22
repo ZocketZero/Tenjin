@@ -222,7 +222,7 @@ dependencies = [
 
 [[package]]
 name = "tenjin_sdn"
-version = "1.0.4"
+version = "1.0.5"
 dependencies = [
  "byteorder",
  "clap",
